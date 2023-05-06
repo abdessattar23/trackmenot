@@ -21,19 +21,20 @@ exports.handler = async function(event, context) {
     });
 
     return {
-      statusCode: response.status,
+      statusCode: 200,
       body: JSON.stringify(results),
       headers: {
-        'Access-Control-Allow-Origin': '.netlify.app',
+        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       },
     };
   } catch (error) {
+    console.error(error);
     return {
-      statusCode: error.response.status,
-      body: JSON.stringify(error.response.data),
+      statusCode: error.response?.status || 500,
+      body: JSON.stringify(error.response?.data || { error: 'An unknown error occurred' }),
       headers: {
-        'Access-Control-Allow-Origin': '.netlify.app',
+        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       },
     };
