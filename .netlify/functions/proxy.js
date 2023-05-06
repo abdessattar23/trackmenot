@@ -5,7 +5,7 @@ exports.handler = async function(event, context) {
   const q = event.queryStringParameters.q;
   if (!q) return { statusCode: 401, body: 'Please provide a query' };
   try {
-    const url = 'https://html.duckduckgo.com/html/?q=${q}';
+    const url = 'https://html.duckduckgo.com/html/?q=' + q;
     const response = await axios.get(url);
     const $ = cheerio.load(response.data);
     const results = [];
