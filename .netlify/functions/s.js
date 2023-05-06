@@ -16,7 +16,7 @@ exports.handler = async function(event, context) {
 
     if (browser) {
       // Request is coming from a browser
-      return { statusCode: 403, body: 'Direct access not allowed' };
+      //return { statusCode: 403, body: 'Direct access not allowed' };
     }
 
     $('div.links_main').each((i, element) => {
