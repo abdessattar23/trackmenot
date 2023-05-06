@@ -27,8 +27,14 @@ const handler = async (event, context) => {
       };
 
       const proxyReq = http.request(options, (proxyRes) => {
-        res.writeHead(proxyRes.statusCode, proxyRes.headers);
-        proxyRes.pipe(res);
+        let data = '';
+        proxyRes.on('data', (chunk) => {
+          data += chunk;
+        });
+        proxyRes.on('end', () => {
+          res.writeHead(proxyRes.statusCode, proxyRes.headers);
+          res.end(data);
+        });
       });
 
       req.pipe(proxyReq);
