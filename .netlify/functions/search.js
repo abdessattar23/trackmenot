@@ -5,6 +5,6 @@ const server = corsAnywhere.createServer({
   removeHeaders: ['cookie', 'cookie2']
 });
 
-exports.handler = server.listen(process.env.PORT || 3000, () => {
+exports.search = server.listen(process.env.PORT || 3000, () => {
   console.log(`Running CORS Anywhere on ${exports.handler.url}`);
 });
