@@ -32,6 +32,7 @@ const handler = async (event, context) => {
           data += chunk;
         });
         proxyRes.on('end', () => {
+          res.setHeader('Content-Type', 'text/plain');
           res.writeHead(proxyRes.statusCode, proxyRes.headers);
           res.end(data);
         });
@@ -40,10 +41,6 @@ const handler = async (event, context) => {
       req.pipe(proxyReq);
     }).listen(port, host, () => {
       console.log(`CORS Anywhere server running on ${host}:${port}`);
-      resolve({
-        statusCode: 200,
-        body: `Proxying ${targetUrl} through CORS Anywhere server at ${host}:${port}`
-      });
     });
   });
 };
