@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TrackMeNot</title>
+  </head>
+<body>
+ <h1>HI I am TrackMeNot platform to start searching click here</h1>
+<input type="text" id="query"/>
+<button onclick="fetch(document.getElementById('query').value)">Click</button>
+<script>
+function fetch(q){
+var xhr = new XMLHttpRequest();
+xhr.onload = function(){
+console.log(xhr.responseText);
+};
+var z = 'https://super-naiad-eb77ce.netlify.app/.netlify/s?q=' + q;
+xhr.open('GET',z);
+xhr.send();
+}
+</script>
+</body>
+</html>
