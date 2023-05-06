@@ -12,10 +12,10 @@ exports.handler = async function(event, context) {
     $('div.links_main').each((i, element) => {
       const $element = $(element);
       const title = $element.find('h2.result__title a').text();
-      const iconLink = 'https:' + $element.find('span.result__icon a').attr('href');
+      const iconLink = 'https:' + $element.find('span.result__icon img').attr('src');
       const snippet = $element.find('a.result__snippet').text();
       const linkElement = $element.find('h2.result__title a');
-      const link = linkElement.attr('href');
+      const link =  decodeURIComponent(linkElement.attr('href').match(/https[^&]+/)[0]);
 
       results.push({ title, iconLink, snippet, link });
     });
