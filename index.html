@@ -16,7 +16,7 @@ var xhr = new XMLHttpRequest();
 xhr.onload = function(){
 console.log(xhr.responseText);
 };
-var z = 'https://super-naiad-eb77ce.netlify.app/.netlify/s?q=' + q;
+var z = '/.netlify/functions/s?q=' + q;
 xhr.open('GET',z);
 xhr.send();
 }
