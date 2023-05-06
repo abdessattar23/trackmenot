@@ -10,7 +10,7 @@ const url = event.queryStringParameters.url;
       statusCode: 200,
       headers: {
         'Access-Control-Allow-Origin': '*', 
-        'Content-Type': 'text/html',
+        'Content-Type': 'text/plain',
       },
       body: response,
     };
