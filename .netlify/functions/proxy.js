@@ -32,7 +32,7 @@ exports.handler = async function(event, context) {
     console.error(error);
     return {
       statusCode: error.response?.status || 500,
-      body: JSON.stringify(error.response?.data || { error: 'An unknown error occurred' }),
+      body: JSON.stringify(error.response?.data || { error: error.message }),
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
