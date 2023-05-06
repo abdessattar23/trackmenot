@@ -6,7 +6,7 @@ const host = '0.0.0.0';
 const port = process.env.PORT || 8080;
 
 const handler = async (event, context) => {
-  const query = url.parse(event.url, true).query;
+  const query = event.queryStringParameters;
   const targetUrl = query.url;
 
   return new Promise((resolve, reject) => {
