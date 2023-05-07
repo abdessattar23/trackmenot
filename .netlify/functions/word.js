@@ -18,7 +18,7 @@ exports.handler = async function(event, context) {
         results.push({title});
       }else{
         const title2 = $element.find('div.pp_title').text();
-        results.push({title2})
+        results.push({title: title2})
       }
     });
 
