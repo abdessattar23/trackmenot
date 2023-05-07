@@ -1,46 +1,27 @@
-/* Custom CSS */
-
-body {
-  background-color: #F1F5FE;
-}
-
-header {
-  background-color: #FFFFFF;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #0B5ED7;
-}
-
-.form-control {
-  border-radius: 0;
-  border-color: #C5C7CD;
-}
-
-.btn-primary {
-  background-color: #0B5ED7;
-  border-color: #0B5ED7;
-  border-radius: 0;
-}
-
-.btn-primary:hover {
-  background-color: #0B4DA5;
-  border-color: #0B4DA5;
-}
-
-.card {
-  border-radius: 0;
-  border-color: #C5C7CD;
-}
-
-.card-title {
-  font-weight: bold;
-  color: #0B5ED7;
-}
-
-.card-text {
-  color: #5F6368;
+.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		.search-container {
+			width: 100%;
+			max-width: 500px;
+			position: relative;
+		}
+		.search-container i {
+			position: absolute;
+			top: 50%;
+			left: 10px;
+			transform: translateY(-50%);
+			height: 30px;
+			width: 30px;
+		}
+		.search-container input.form-control {
+			padding-left: 50px;
+			height: 60px;
+			font-size: 24px;
+		}
+body{
+  background:lightgreen;
 }
