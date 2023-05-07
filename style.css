@@ -1,0 +1,46 @@
+/* Custom CSS */
+
+body {
+  background-color: #F1F5FE;
+}
+
+header {
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0B5ED7;
+}
+
+.form-control {
+  border-radius: 0;
+  border-color: #C5C7CD;
+}
+
+.btn-primary {
+  background-color: #0B5ED7;
+  border-color: #0B5ED7;
+  border-radius: 0;
+}
+
+.btn-primary:hover {
+  background-color: #0B4DA5;
+  border-color: #0B4DA5;
+}
+
+.card {
+  border-radius: 0;
+  border-color: #C5C7CD;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #0B5ED7;
+}
+
+.card-text {
+  color: #5F6368;
+}
