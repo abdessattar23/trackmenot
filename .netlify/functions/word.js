@@ -11,7 +11,7 @@ exports.handler = async function(event, context) {
     const response = await axios.get(url);
     const $ = cheerio.load(response.data);
     const results = [];
-    $('ul').each((i, element) => {
+    $('li').each((i, element) => {
       const $element = $(element);
       const title = $element.find('span.sa_tm_text').text();
       if(title){
