@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>TrackMeNot</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cool Search Engine</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-9jJt4MiyZnD2dA4C5k1UkKvZTg7K4uIsNqBzG2jvnPzZ3Y0vq7+K4h+3I93C5m3XcN1E8f6eX9TrrGQ5tQyjRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-<body>
- <h1>HI I am TrackMeNot platform to start searching click here</h1>
-<input type="text" id="query"/>
-<button onclick="fetch(document.getElementById('query').value)">Click</button>
-<script>
-function fetch(q){
-var xhr = new XMLHttpRequest();
-xhr.onload = function(){
-console.log(xhr.responseText);
-};
-var z = '/.netlify/functions/s?q=' + q;
-xhr.open('GET',z);
-xhr.send();
-}
-</script>
-</body>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Cool Search Engine</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <form class="d-flex ms-auto">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container my-5">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Inspirational Quote 1</h5>
+                <p class="card-text">"Believe you can and you're halfway there." -Theodore Roosevelt</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Inspirational Quote 2</h5>
+                <p class="card-text">"Success is not final, failure is not fatal: It is the courage to continue that counts." -Winston Churchill</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Inspirational Quote 3</h5>
+                <p class="card-text">"The only way to do great work is to love what you do." -Steve Jobs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js" integrity="sha512-0VZ6+7Q4n6Y+9lZr7w7k9J34Lz14Oy5k4RbIvO786TgJZJ1Q3FfLqLz3x8JzRdYfOe7y7zJkNj2WwH/dm3zjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
 </html>
