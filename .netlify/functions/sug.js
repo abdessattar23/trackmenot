@@ -7,7 +7,7 @@ exports.handler = async function(event, context) {
   if (!q) return { statusCode: 200, body: '' };
   try {
     const da = await axios.get("https://api.ipdata.co/?api-key=039310658d62e9a1260c7f070e0e76dc396f0d25b317fcd4bf3d7b18");
-    const country = JSON.parse(da).country_code;
+    const country = da.country_code;
     const url = 'https://www.bing.com/AS/Suggestions?mkt=en-'+country+'&cvid=14EAFA164E84424DA4470C1658041F7A&qry=' + q;
     const response = await axios.get(url);
     const $ = cheerio.load(response.data);
