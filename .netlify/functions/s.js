@@ -25,7 +25,7 @@ exports.handler = async function(event, context) {
       const iconLink = 'https:' + $element.find('span.result__icon img').attr('src');
       const snippet = $element.find('a.result__snippet').text();
       const linkElement = $element.find('h2.result__title a');
-      const link = decodeURIComponent(linkElement.attr('href').match(/https[^&]+/)[0]);
+      const link = decodeURIComponent(linkElement.attr('href').match(/http[^&]+/)[0]);
 
       results.push({ title, iconLink, snippet, link });
     });
